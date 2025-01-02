@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>課題一覧｜課題管理アプリケーション</title>
@@ -14,9 +14,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>(id)</th>
-        <td>(summary)</td>
+      <tr th:each = "issue : ${issueList}">
+        <th th:text = "${issue.id}">(id)</th>
+        <td th:text = "${issue.summary}">(summary)</td>
       </tr>
     </tbody>
   </table>
