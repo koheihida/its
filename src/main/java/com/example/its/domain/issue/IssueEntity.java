@@ -1,15 +1,12 @@
 package com.example.its.domain.issue;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class IssueEntity {
     private Long   id;
     private String summary;
     private String description;
-
-    public IssueEntity(Long id, String summary, String description) {
-        this.id = id;
-        this.summary = summary;
-        this.description = description;
-    }
 
     public Long getId() {
         return id;
